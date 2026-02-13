@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2 - Gerador de Cartão</title>
+    <style>
+       
+        :root {
+            --cor-fundo: white;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .Painel {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+       
+        .cartao {
+            width: 300px;
+            height: 180px;
+            border-radius: 15px; 
+            box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
+            background-color: var(--cor-fundo); 
+            
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            transition: 0.3s; 
+            border: 1px solid #ddd;
+        }
+
+        #textNome { margin: 0; color: #333; }
+        #textCargo { color: #666; }
+    </style>
+</head>
+<body>
+    <div class="Painel">
+        <div class="form-group">
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" placeholder="Digite seu Nome" oninput="atualizar()"><br><br>
+            
+            <label for="cargo">Cargo: </label>
+            <input type="text" id="cargo" placeholder="Digite seu Cargo" oninput="atualizar()"><br><br>
+            
+            <label for="cor">Cor do Fundo: </label>
+            <input type="color" id="cor" value="#ffffff" oninput="atualizar()">
+        </div>
+    </div>
+
+    <div class="LCartao">
+        <div id="visual" class="cartao">
+            <h2 id="textNome">Seu Nome</h2>
+            <p id="textCargo">Seu Cargo</p>
+        </div>
+    </div>
+
+    <script>
+        function atualizar() {
+            const nome = document.getElementById('nome').value;
+            const cargo = document.getElementById('cargo').value;
+            const cor = document.getElementById('cor').value;
+
+            document.getElementById("textNome").innerText = nome || "Seu Nome";
+            document.getElementById("textCargo").innerText = cargo || "Seu Cargo";
+
+            const cartao = document.getElementById('visual');
+            cartao.style.setProperty('--cor-fundo', cor);
+        }
+    </script>
+</body>
+</html>

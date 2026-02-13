@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+    <style>
+        .fundo{
+            background-color: white;
+        }
+        .quente{
+            background-color: orange;
+        }
+        .frio{
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body id="fundo" class="fundo">
+    <div >
+    <h1>Conversor de Temperatura</h1>
+    <div>
+        <label for="tempC">Temp em C</label>
+        <input type="number" id="tempC" placeholder="Digite a temperatura em C">
+        <button onclick="En()">Enviar</button>
+        <p id="tex"></p>
+    </div>
+</div>
+</body>
+<script>
+function En(){
+ tempc = document.getElementById('tempC').value;
+ tempF = (tempc * 1.8) + 32
+
+ fundo.classList.remove('quente','frio');
+document.getElementById("tex").innerHTML = `A Temperatura em Fahrenheit é ${tempF}`
+ if(tempF > 80){
+    document.getElementById('fundo').classList.add('quente')
+ } else {
+    document.getElementById('fundo').classList.add('frio')
+ }
+}
+
+
+</script>
+</html>
