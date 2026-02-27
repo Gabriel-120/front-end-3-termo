@@ -1,0 +1,59 @@
+
+        
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #ffffff;
+        }
+        .nome1{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 30px;
+            background-color: aqua;
+            width: 500px;
+            height: auto;
+        }
+        .nome2{
+            background-color: coral;
+            width: auto;
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;                              
+            align-items: center;
+            border: 2px solid #000000;
+
+        }
+        .nome3{
+            background-color: chartreuse;
+            width: auto;
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            border: 2px solid #000000;
+
+        }
+        .nome4{
+            background-color: cadetblue;
+            width: auto;
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            border: 2px solid #000000;
+        }
+        .nome5{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            border: 1px solid #000000;
+
+        }
