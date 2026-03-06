@@ -1,0 +1,66 @@
+body {
+    border: 0px;
+
+}
+
+.container {
+    /* class mae n possuir borda */
+    border: 0px;
+}
+
+.nav-bar {
+    /* aqui é a nav bar que deve fica no lado esquerdo */
+    text-align: left;
+}
+
+.nav-bar.superior {
+    /* aqui é a logo do instagram que vai ficar para no canto superior esquerdo */
+    gap: 100px;
+    margin-top: auto
+}
+
+.story {
+    /* div completa do story para configuraçãio do layout */
+    border: 50px;
+    
+}
+
+.story-1 img {
+    /* aqui onde vai ficar a borda do story que deve ser vermelho comum  tom de amarelo na esquerda baixo */
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.feeds {
+    /* feed total para configuracao de espacamento e tals */
+
+}
+
+.feeds-1 {
+    /* configuração interior dos feeds */
+}
+
+.feeds-1 img {
+    /* configuracao das imagens do feeds */
+    width: 150px;
+    height: 150px;
+}
+
+.feeds-1.save {
+    /* icon de salvar que deve ficar na direita no feed enquanto o restante fica na esquerda */
+    align-items: right;
+}
+
+.feed-header {
+    text-align: left;
+    height: 110px;
+    width: auto;
+}
+
+.feed-header img {
+    /* para configuração da imagem do perfil dos feeds */
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
