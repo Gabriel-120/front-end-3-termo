@@ -1,66 +1,236 @@
-body {
-    border: 0px;
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BODY */
+
+body{
+background:#fafafa;
+color:#262626;
+}
+
+/* CONTAINER */
+
+.container{
+display:flex;
+}
+
+/* NAVBAR */
+
+.nav-bar{
+width:220px;
+height:100vh;
+border-right:1px solid #dbdbdb;
+padding:25px 15px;
+position:fixed;
+background:white;
+display:flex;
+flex-direction:column;
+gap:28px;
+}
+
+.nav-bar svg{
+cursor:pointer;
+transition:0.2s;
+}
+
+.nav-bar svg:hover{
+transform:scale(1.1);
+}
+
+/* MAIN */
+
+main{
+margin-left:220px;
+width:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:20px;
+}
+
+.story{
+width:100%;
+max-width:470px;
+}
+
+/* STORIES */
+
+.story{
+display:flex;
+gap:15px;
+padding:15px;
+background:white;
+border:1px solid #dbdbdb;
+border-radius:8px;
+overflow-x:auto;
+margin-bottom:20px;
+}
+
+.story-1{
+text-align:center;
+font-size:12px;
+}
+
+.story-1 img{
+width:65px;
+height:65px;
+border-radius:50%;
+padding:3px;
+
+background:linear-gradient(
+45deg,
+#feda75,
+#fa7e1e,
+#d62976,
+#962fbf,
+#4f5bd5
+);
+}
+
+.perfil_story{
+margin-top:5px;
+}
+
+/* FEEDS */
+
+.feeds{
+width:470px;
+}
+
+/* POST */
+
+.feed-1{
+background:white;
+border:1px solid #dbdbdb;
+border-radius:8px;
+margin-bottom:25px;
+}
+
+/* HEADER POST */
+
+.feed-header{
+display:flex;
+align-items:center;
+gap:10px;
+padding:12px;
+font-weight:bold;
+}
+
+.feed-header img{
+width:35px;
+height:35px;
+border-radius:50%;
+}
+
+/* IMAGEM */
+
+.feed-1 > img{
+width:100%;
+display:block;
+height:auto;
+}
+
+/* AÇÕES */
+
+.feed-actions{
+padding:10px;
+}
+
+.feed-actions svg{
+margin-right:12px;
+cursor:pointer;
+transition:0.2s;
+}
+
+.feed-actions svg:hover{
+transform:scale(1.1);
+}
+
+.save{
+float:right;
+}
+
+/* TEXTO */
+
+.feed-actions p{
+margin-top:8px;
+font-size:14px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+font-size:12px;
+color:gray;
+margin:40px 0;
+}
+
+/* ========================= */
+/* RESPONSIVIDADE */
+/* ========================= */
+
+/* TABLET */
+
+@media (max-width: 900px){
+
+.nav-bar{
+width:70px;
+align-items:center;
+}
+
+main{
+margin-left:70px;
+}
+
+.feeds{
+width:90%;
+}
 
 }
 
-.container {
-    /* class mae n possuir borda */
-    border: 0px;
+/* CELULAR */
+
+@media (max-width: 600px){
+
+.container{
+flex-direction:column;
 }
 
-.nav-bar {
-    /* aqui é a nav bar que deve fica no lado esquerdo */
-    text-align: left;
+/* NAVBAR vira menu inferior */
+
+.nav-bar{
+position:fixed;
+bottom:0;
+top:auto;
+width:100%;
+height:60px;
+flex-direction:row;
+justify-content:space-around;
+align-items:center;
+border-top:1px solid #dbdbdb;
+border-right:none;
+padding:0;
 }
 
-.nav-bar.superior {
-    /* aqui é a logo do instagram que vai ficar para no canto superior esquerdo */
-    gap: 100px;
-    margin-top: auto
+main{
+margin-left:0;
+padding-bottom:80px;
 }
 
-.story {
-    /* div completa do story para configuraçãio do layout */
-    border: 50px;
-    
+.story{
+border-radius:0;
+border-left:none;
+border-right:none;
 }
 
-.story-1 img {
-    /* aqui onde vai ficar a borda do story que deve ser vermelho comum  tom de amarelo na esquerda baixo */
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
+.feeds{
+width:100%;
 }
 
-.feeds {
-    /* feed total para configuracao de espacamento e tals */
-
-}
-
-.feeds-1 {
-    /* configuração interior dos feeds */
-}
-
-.feeds-1 img {
-    /* configuracao das imagens do feeds */
-    width: 150px;
-    height: 150px;
-}
-
-.feeds-1.save {
-    /* icon de salvar que deve ficar na direita no feed enquanto o restante fica na esquerda */
-    align-items: right;
-}
-
-.feed-header {
-    text-align: left;
-    height: 110px;
-    width: auto;
-}
-
-.feed-header img {
-    /* para configuração da imagem do perfil dos feeds */
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
 }
